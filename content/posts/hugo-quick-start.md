@@ -193,3 +193,13 @@ PS D:\Hugo\Sites\hugotest.com> hugo server -D
 ```
 
 ローカルサイトは http://localhost:1313 で確認できます
+
+### 補足
+
+Hugoのサイトを何らかのホスティングサービス(たとえばGitHub Pages)で公開する場合、`config.toml`の`baseURL`にドメインを設定します。例えば次のような設定をしたとします。
+
+```
+baseURL = "https://yoshimune.github.io/hugotest/"
+```
+
+この場合、ローカルサーバーのアドレスは http://localhost:1313/hugotest/ となります
