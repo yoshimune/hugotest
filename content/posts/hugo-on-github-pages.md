@@ -1,7 +1,7 @@
 ---
 title: "Hugo on Github Pages"
 date: 2019-09-08T16:59:03+09:00
-draft: true
+draft: false
 ---
 
 # Summary
