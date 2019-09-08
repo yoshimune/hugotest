@@ -3,34 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hugotest.com/posts/hugo-quick-start/</loc>
+    <loc>https://yoshimune.github.io/hugotest/posts/hugo-quick-start/</loc>
     <lastmod>2019-09-08T15:41:27+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hugotest.com/</loc>
+    <loc>https://yoshimune.github.io/hugotest/</loc>
     <lastmod>2019-09-08T15:41:27+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hugotest.com/posts/</loc>
+    <loc>https://yoshimune.github.io/hugotest/posts/</loc>
     <lastmod>2019-09-08T15:41:27+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hugotest.com/categories/</loc>
+    <loc>https://yoshimune.github.io/hugotest/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hugotest.com/tags/</loc>
+    <loc>https://yoshimune.github.io/hugotest/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

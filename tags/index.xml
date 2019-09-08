@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Hugo Test</title>
-    <link>https://hugotest.com/tags/</link>
+    <link>https://yoshimune.github.io/hugotest/tags/</link>
     <description>Recent content in Tags on Hugo Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="https://hugotest.com/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://yoshimune.github.io/hugotest/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
