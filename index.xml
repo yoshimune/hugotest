@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo Test</title>
+    <link>https://hugotest.com/</link>
+    <description>Recent content on Hugo Test</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Sep 2019 15:41:27 +0900</lastBuildDate>
+    
+	<atom:link href="https://hugotest.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo Quick Start</title>
+      <link>https://hugotest.com/posts/hugo-quick-start/</link>
+      <pubDate>Sun, 08 Sep 2019 15:41:27 +0900</pubDate>
+      
+      <guid>https://hugotest.com/posts/hugo-quick-start/</guid>
+      <description>Summary Hugoの使い方をまとめます。
+本チャプターでは以下の事項について説明します
+ Hugoダウンロード 初期設定 テストサイト生成 テーマ設定 記事投稿 ローカルサーバー起動  Reference HUGO
+Hugoとは Hugoはウェブサイトを構築するためのフレームワークです。Hugoを使って簡単に静的サイトを生成することができます。
+Hugoの特徴 Hugoの特徴は以下の２つです
+ Go言語を使って開発されている 高速でサイト生成が可能   HugoはGoで作成されていますが、Hugoを使用する上でGoの開発環境をセットアップする必要はありません。Hugoはコンパイル済みバイナリファイルとして配布されています。
+ Hugo セットアップ ここからHugoのセットアップ方法について解説します。ここではWindows10を使用していることを前提に解説を進めます。Windows以外のプラットフォームでのセットアップ方法は、公式のリファレンスを参照してください。
+前提条件 gitが使えるようにしておいてください
+Hugoダウンロード HugoのリリースページからHugoのzipファイルを適当な場所にダウンロードします。今回はhugo_0.58.1_Windows-64bit.zip をダウンロードしました。
+ダウンロードが完了したら、zipファイルを解凍します。
+初期設定 Hugoの初期設定を行います
+プロジェクトフォルダ まず、プロジェクトを管理するための場所を用意します。今回はD:\Hugoにプロジェクトを配置することにしました。もちろん、各自の環境に合わせて適切な場所を用意して大丈夫です。
+D:\Hugo配下に、Hugo本体を格納するbinフォルダと生成したサイトを格納するSitesフォルダを作成します。
+binフォルダ配下に、ダウンロードして解凍したHugoフォルダの中身をすべて入れます。
+パス設定 D:\Hugo\binにPathを通します。
+システムの詳細設定 → 環境変数ウィンドウを開き、Path変数にD:\Hugo\binを追加します。
+動作確認 コマンドプロンプトを開き、以下のコマンドを入力してください。
+PS D:\Hugo\Sites&amp;gt; hugo new site example.com  次のような文言が表示されれば設定完了です
+PS D:\Hugo&amp;gt; hugo help hugo is the main command, used to build your Hugo site. Hugo is a Fast and Flexible Static Site Generator built with love by spf13 and friends in Go.</description>
+    </item>
+    
+  </channel>
+</rss>

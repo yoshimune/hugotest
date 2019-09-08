@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Hugo Test  | Hugo Quick Start</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.58.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Hugo Quick Start" />
+<meta property="og:description" content="Summary Hugoの使い方をまとめます。
+本チャプターでは以下の事項について説明します
+ Hugoダウンロード 初期設定 テストサイト生成 テーマ設定 記事投稿 ローカルサーバー起動  Reference HUGO
+Hugoとは Hugoはウェブサイトを構築するためのフレームワークです。Hugoを使って簡単に静的サイトを生成することができます。
+Hugoの特徴 Hugoの特徴は以下の２つです
+ Go言語を使って開発されている 高速でサイト生成が可能   HugoはGoで作成されていますが、Hugoを使用する上でGoの開発環境をセットアップする必要はありません。Hugoはコンパイル済みバイナリファイルとして配布されています。
+ Hugo セットアップ ここからHugoのセットアップ方法について解説します。ここではWindows10を使用していることを前提に解説を進めます。Windows以外のプラットフォームでのセットアップ方法は、公式のリファレンスを参照してください。
+前提条件 gitが使えるようにしておいてください
+Hugoダウンロード HugoのリリースページからHugoのzipファイルを適当な場所にダウンロードします。今回はhugo_0.58.1_Windows-64bit.zip をダウンロードしました。
+ダウンロードが完了したら、zipファイルを解凍します。
+初期設定 Hugoの初期設定を行います
+プロジェクトフォルダ まず、プロジェクトを管理するための場所を用意します。今回はD:\Hugoにプロジェクトを配置することにしました。もちろん、各自の環境に合わせて適切な場所を用意して大丈夫です。
+D:\Hugo配下に、Hugo本体を格納するbinフォルダと生成したサイトを格納するSitesフォルダを作成します。
+binフォルダ配下に、ダウンロードして解凍したHugoフォルダの中身をすべて入れます。
+パス設定 D:\Hugo\binにPathを通します。
+システムの詳細設定 → 環境変数ウィンドウを開き、Path変数にD:\Hugo\binを追加します。
+動作確認 コマンドプロンプトを開き、以下のコマンドを入力してください。
+PS D:\Hugo\Sites&gt; hugo new site example.com  次のような文言が表示されれば設定完了です
+PS D:\Hugo&gt; hugo help hugo is the main command, used to build your Hugo site. Hugo is a Fast and Flexible Static Site Generator built with love by spf13 and friends in Go." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugotest.com/posts/hugo-quick-start/" />
+<meta property="article:published_time" content="2019-09-08T15:41:27+09:00" />
+<meta property="article:modified_time" content="2019-09-08T15:41:27+09:00" />
+<meta itemprop="name" content="Hugo Quick Start">
+<meta itemprop="description" content="Summary Hugoの使い方をまとめます。
+本チャプターでは以下の事項について説明します
+ Hugoダウンロード 初期設定 テストサイト生成 テーマ設定 記事投稿 ローカルサーバー起動  Reference HUGO
+Hugoとは Hugoはウェブサイトを構築するためのフレームワークです。Hugoを使って簡単に静的サイトを生成することができます。
+Hugoの特徴 Hugoの特徴は以下の２つです
+ Go言語を使って開発されている 高速でサイト生成が可能   HugoはGoで作成されていますが、Hugoを使用する上でGoの開発環境をセットアップする必要はありません。Hugoはコンパイル済みバイナリファイルとして配布されています。
+ Hugo セットアップ ここからHugoのセットアップ方法について解説します。ここではWindows10を使用していることを前提に解説を進めます。Windows以外のプラットフォームでのセットアップ方法は、公式のリファレンスを参照してください。
+前提条件 gitが使えるようにしておいてください
+Hugoダウンロード HugoのリリースページからHugoのzipファイルを適当な場所にダウンロードします。今回はhugo_0.58.1_Windows-64bit.zip をダウンロードしました。
+ダウンロードが完了したら、zipファイルを解凍します。
+初期設定 Hugoの初期設定を行います
+プロジェクトフォルダ まず、プロジェクトを管理するための場所を用意します。今回はD:\Hugoにプロジェクトを配置することにしました。もちろん、各自の環境に合わせて適切な場所を用意して大丈夫です。
+D:\Hugo配下に、Hugo本体を格納するbinフォルダと生成したサイトを格納するSitesフォルダを作成します。
+binフォルダ配下に、ダウンロードして解凍したHugoフォルダの中身をすべて入れます。
+パス設定 D:\Hugo\binにPathを通します。
+システムの詳細設定 → 環境変数ウィンドウを開き、Path変数にD:\Hugo\binを追加します。
+動作確認 コマンドプロンプトを開き、以下のコマンドを入力してください。
+PS D:\Hugo\Sites&gt; hugo new site example.com  次のような文言が表示されれば設定完了です
+PS D:\Hugo&gt; hugo help hugo is the main command, used to build your Hugo site. Hugo is a Fast and Flexible Static Site Generator built with love by spf13 and friends in Go.">
+
+
+<meta itemprop="datePublished" content="2019-09-08T15:41:27&#43;09:00" />
+<meta itemprop="dateModified" content="2019-09-08T15:41:27&#43;09:00" />
+<meta itemprop="wordCount" content="267">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo Quick Start"/>
+<meta name="twitter:description" content="Summary Hugoの使い方をまとめます。
+本チャプターでは以下の事項について説明します
+ Hugoダウンロード 初期設定 テストサイト生成 テーマ設定 記事投稿 ローカルサーバー起動  Reference HUGO
+Hugoとは Hugoはウェブサイトを構築するためのフレームワークです。Hugoを使って簡単に静的サイトを生成することができます。
+Hugoの特徴 Hugoの特徴は以下の２つです
+ Go言語を使って開発されている 高速でサイト生成が可能   HugoはGoで作成されていますが、Hugoを使用する上でGoの開発環境をセットアップする必要はありません。Hugoはコンパイル済みバイナリファイルとして配布されています。
+ Hugo セットアップ ここからHugoのセットアップ方法について解説します。ここではWindows10を使用していることを前提に解説を進めます。Windows以外のプラットフォームでのセットアップ方法は、公式のリファレンスを参照してください。
+前提条件 gitが使えるようにしておいてください
+Hugoダウンロード HugoのリリースページからHugoのzipファイルを適当な場所にダウンロードします。今回はhugo_0.58.1_Windows-64bit.zip をダウンロードしました。
+ダウンロードが完了したら、zipファイルを解凍します。
+初期設定 Hugoの初期設定を行います
+プロジェクトフォルダ まず、プロジェクトを管理するための場所を用意します。今回はD:\Hugoにプロジェクトを配置することにしました。もちろん、各自の環境に合わせて適切な場所を用意して大丈夫です。
+D:\Hugo配下に、Hugo本体を格納するbinフォルダと生成したサイトを格納するSitesフォルダを作成します。
+binフォルダ配下に、ダウンロードして解凍したHugoフォルダの中身をすべて入れます。
+パス設定 D:\Hugo\binにPathを通します。
+システムの詳細設定 → 環境変数ウィンドウを開き、Path変数にD:\Hugo\binを追加します。
+動作確認 コマンドプロンプトを開き、以下のコマンドを入力してください。
+PS D:\Hugo\Sites&gt; hugo new site example.com  次のような文言が表示されれば設定完了です
+PS D:\Hugo&gt; hugo help hugo is the main command, used to build your Hugo site. Hugo is a Fast and Flexible Static Site Generator built with love by spf13 and friends in Go."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://hugotest.com" class="f3 fw2 hover-white no-underline white-90 dib">
+      Hugo Test
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Hugo Quick Start</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-09-08T15:41:27&#43;09:00">September 8, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="summary">Summary</h1>
+
+<p>Hugoの使い方をまとめます。<br />
+本チャプターでは以下の事項について説明します</p>
+
+<ol>
+<li>Hugoダウンロード</li>
+<li>初期設定</li>
+<li>テストサイト生成</li>
+<li>テーマ設定</li>
+<li>記事投稿</li>
+<li>ローカルサーバー起動</li>
+</ol>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="https://gohugo.io/">HUGO</a></p>
+
+<h1 id="hugoとは">Hugoとは</h1>
+
+<p>Hugoはウェブサイトを構築するためのフレームワークです。Hugoを使って簡単に静的サイトを生成することができます。</p>
+
+<h2 id="hugoの特徴">Hugoの特徴</h2>
+
+<p>Hugoの特徴は以下の２つです</p>
+
+<ul>
+<li><a href="https://golang.org/">Go言語</a>を使って開発されている</li>
+<li>高速でサイト生成が可能</li>
+</ul>
+
+<blockquote>
+<p>HugoはGoで作成されていますが、Hugoを使用する上でGoの開発環境をセットアップする必要はありません。Hugoはコンパイル済みバイナリファイルとして配布されています。</p>
+</blockquote>
+
+<h1 id="hugo-セットアップ">Hugo セットアップ</h1>
+
+<p>ここからHugoのセットアップ方法について解説します。ここではWindows10を使用していることを前提に解説を進めます。Windows以外のプラットフォームでのセットアップ方法は、<a href="https://gohugo.io/getting-started/installing">公式のリファレンス</a>を参照してください。</p>
+
+<h2 id="前提条件">前提条件</h2>
+
+<p>gitが使えるようにしておいてください</p>
+
+<h2 id="hugoダウンロード">Hugoダウンロード</h2>
+
+<p><a href="https://github.com/gohugoio/hugo/releases">Hugoのリリースページ</a>からHugoのzipファイルを適当な場所にダウンロードします。今回は<code>hugo_0.58.1_Windows-64bit.zip
+</code>をダウンロードしました。</p>
+
+<p>ダウンロードが完了したら、zipファイルを解凍します。</p>
+
+<h2 id="初期設定">初期設定</h2>
+
+<p>Hugoの初期設定を行います</p>
+
+<h3 id="プロジェクトフォルダ">プロジェクトフォルダ</h3>
+
+<p>まず、プロジェクトを管理するための場所を用意します。今回は<code>D:\Hugo</code>にプロジェクトを配置することにしました。もちろん、各自の環境に合わせて適切な場所を用意して大丈夫です。</p>
+
+<p><code>D:\Hugo</code>配下に、Hugo本体を格納する<code>bin</code>フォルダと生成したサイトを格納する<code>Sites</code>フォルダを作成します。</p>
+
+<p><code>bin</code>フォルダ配下に、ダウンロードして解凍したHugoフォルダの中身をすべて入れます。</p>
+
+<h3 id="パス設定">パス設定</h3>
+
+<p><code>D:\Hugo\bin</code>に<code>Path</code>を通します。</p>
+
+<p>システムの詳細設定 → 環境変数ウィンドウを開き、<code>Path</code>変数に<code>D:\Hugo\bin</code>を追加します。</p>
+
+<h3 id="動作確認">動作確認</h3>
+
+<p>コマンドプロンプトを開き、以下のコマンドを入力してください。</p>
+
+<pre><code>PS D:\Hugo\Sites&gt; hugo new site example.com
+</code></pre>
+
+<p>次のような文言が表示されれば設定完了です</p>
+
+<pre><code>PS D:\Hugo&gt; hugo help
+hugo is the main command, used to build your Hugo site.
+
+Hugo is a Fast and Flexible Static Site Generator
+built with love by spf13 and friends in Go.
+
+Complete documentation is available at http://gohugo.io/.
+</code></pre>
+
+<h2 id="テストサイト生成">テストサイト生成</h2>
+
+<p>テストサイトを生成してみます。コマンドプロンプトで、<code>D:\Hugo\Sites</code>に移動し、以下のコマンドを入力してください。</p>
+
+<pre><code>PS D:\Hugo\Sites&gt; hugo new site hugotest.com
+</code></pre>
+
+<p><code>D:\Hugo\Sites\hugotest.com</code>というフォルダが生成されれば成功です。</p>
+
+<blockquote>
+<p>Hugoは<code>UTF-8</code>でないと正しく動作しません。コマンドプロンプトの文字コードを<code>UTF-8</code>に変更するには<code>CHCP 65001</code>と入力します</p>
+</blockquote>
+
+<h2 id="テーマ設定">テーマ設定</h2>
+
+<p>生成したサイトにテーマを適用します。テーマのリストは<a href="https://themes.gohugo.io/">themes.gohugo.io</a>にあります。このquick startは<a href="https://themes.gohugo.io/gohugo-theme-ananke/">Ananke theme</a>を使います</p>
+
+<p>ここからgitを使います。テーマのプロジェクトをサブモジュールとして追加します。</p>
+
+<p>まずは<code>example.com</code>フォルダに移動してください</p>
+
+<pre><code>PS D:\Hugo\Sites&gt; cd hugotest.com
+</code></pre>
+
+<p>gitを初期化します。</p>
+
+<pre><code>PS D:\Hugo\Sites\hugotest.com&gt; git init
+</code></pre>
+
+<p>テーマをサブモジュールとして追加します。</p>
+
+<pre><code>PS D:\Hugo\Sites\hugotest.com&gt; git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
+</code></pre>
+
+<p>これでテーマが追加されました。最後にプロジェクト設定ファイルを更新してテーマを有効にします。<code>hugotest.com\config.toml</code>を以下のように修正してください</p>
+
+<pre><code>title = &quot;Hugo Test&quot;
+baseURL = &quot;https://hugotest.com&quot;
+languageCode = &quot;en-us&quot;
+theme = &quot;ananke&quot;
+
+MetaDataFormat = &quot;yaml&quot;
+DefaultContentLanguage = &quot;en&quot;
+SectionPagesMenu = &quot;main&quot;
+Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = &quot;&quot;
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = &quot;monthly&quot;
+  priority = 0.5
+  filename = &quot;sitemap.xml&quot;
+
+[params]
+  favicon = &quot;&quot;
+  description = &quot;The last theme you'll ever need. Maybe.&quot;
+  facebook = &quot;&quot;
+  twitter = &quot;&quot;
+  instagram = &quot;&quot;
+  youtube = &quot;&quot;
+  github = &quot;&quot;
+  gitlab = &quot;&quot;
+  linkedin = &quot;&quot;
+  mastodon = &quot;&quot;
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with &quot;bg-&quot;
+  background_color_class = &quot;bg-black&quot;
+  featured_image = &quot;/images/gohugo-default-sample-hero-image.jpg&quot;
+  recent_posts_number = 2
+</code></pre>
+
+<h2 id="記事投稿">記事投稿</h2>
+
+<p>記事を投稿するには次のコマンドを使用します</p>
+
+<pre><code>PS D:\Hugo\Sites\hugotest.com&gt; hugo new posts/my-first-post.md
+</code></pre>
+
+<p><code>hugotest.com\content\posts\my-first-post.md</code>というファイルが生成されます。</p>
+
+<p>新規投稿した記事は、デフォルトで<a href="https://gohugo.io/getting-started/usage/#draft-future-and-expired-content">ドラフト</a>状態となっています。記事のファイルを開いて、ファイルの先頭に以下の設定が書き込まれていることを確認してください</p>
+
+<pre><code>draft: true
+</code></pre>
+
+<p>ドラフトを無効にする場合は<code>draft: false</code>にします</p>
+
+<h2 id="ローカルサーバー起動">ローカルサーバー起動</h2>
+
+<p>ローカルサーバーを起動し、表示を確認します。以下のコマンドを実行し、サーバーを起動してください</p>
+
+<pre><code>PS D:\Hugo\Sites\hugotest.com&gt; hugo server
+</code></pre>
+
+<p>ドラフト状態の記事も表示したい場合は、<code>-D</code>をつけてサーバーを起動します</p>
+
+<pre><code>PS D:\Hugo\Sites\hugotest.com&gt; hugo server -D
+</code></pre>
+
+<p>ローカルサイトは <a href="http://localhost:1313">http://localhost:1313</a> で確認できます</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://hugotest.com" >
+    &copy; 2019 Hugo Test
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

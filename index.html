@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Hugo Test </title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.58.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+      <link href="https://hugotest.com/index.xml" rel="alternate" type="application/rss+xml" title="Hugo Test" />
+      <link href="https://hugotest.com/index.xml" rel="feed" type="application/rss+xml" title="Hugo Test" />
+    
+
+    <meta property="og:title" content="Hugo Test" />
+<meta property="og:description" content="The last theme you&#39;ll ever need. Maybe." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hugotest.com/" />
+
+<meta property="og:updated_time" content="2019-09-08T15:41:27+09:00" />
+<meta itemprop="name" content="Hugo Test">
+<meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo Test"/>
+<meta name="twitter:description" content="The last theme you&#39;ll ever need. Maybe."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://hugotest.com/images/gohugo-default-sample-hero-image.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://hugotest.com" class="f3 fw2 hover-white no-underline white-90 dib">
+      Hugo Test
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
+          Hugo Test
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+    
+  </article>
+  
+  
+  
+  
+  
+  
+  
+    
+    
+
+    <div class="pa3 pa4-ns w-100 w-70-ns center">
+      
+       
+          <h1 class="flex-none">
+            Recent Posts
+          </h1>
+        
+
+      
+
+      <section class="w-100 mw8">
+        
+        
+          <div class="relative w-100 mb4">
+            
+<article class="bb b--black-10">
+  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
+    <div class="flex flex-column flex-row-ns">
+      
+      <div class="blah w-100">
+        <h1 class="f3 fw1 athelas mt0 lh-title">
+          <a href="/posts/hugo-quick-start/" class="color-inherit dim link">
+            Hugo Quick Start
+            </a>
+        </h1>
+        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
+          Summary Hugoの使い方をまとめます。
+本チャプターでは以下の事項について説明します
+ Hugoダウンロード 初期設定 テストサイト生成 テーマ設定 記事投稿 ローカルサーバー起動  Reference HUGO
+Hugoとは Hugoはウェブサイトを構築するためのフレームワークです。Hugoを使って簡単に静的サイトを生成することができます。
+Hugoの特徴 Hugoの特徴は以下の２つです
+ Go言語を使って開発されている 高速でサイト生成が可能   HugoはGoで作成されていますが、Hugoを使用する上でGoの開発環境をセットアップする必要はありません。Hugoはコンパイル済みバイナリファイルとして配布されています。
+ Hugo セットアップ ここからHugoのセットアップ方法について解説します。ここではWindows10を使用していることを前提に解説を進めます。Windows以外のプラットフォームでのセットアップ方法は、公式のリファレンスを参照してください。
+前提条件 gitが使えるようにしておいてください
+Hugoダウンロード HugoのリリースページからHugoのzipファイルを適当な場所にダウンロードします。今回はhugo_0.58.1_Windows-64bit.zip をダウンロードしました。
+ダウンロードが完了したら、zipファイルを解凍します。
+初期設定 Hugoの初期設定を行います
+プロジェクトフォルダ まず、プロジェクトを管理するための場所を用意します。今回はD:\Hugoにプロジェクトを配置することにしました。もちろん、各自の環境に合わせて適切な場所を用意して大丈夫です。
+D:\Hugo配下に、Hugo本体を格納するbinフォルダと生成したサイトを格納するSitesフォルダを作成します。
+binフォルダ配下に、ダウンロードして解凍したHugoフォルダの中身をすべて入れます。
+パス設定 D:\Hugo\binにPathを通します。
+システムの詳細設定 → 環境変数ウィンドウを開き、Path変数にD:\Hugo\binを追加します。
+動作確認 コマンドプロンプトを開き、以下のコマンドを入力してください。
+PS D:\Hugo\Sites&gt; hugo new site example.com  次のような文言が表示されれば設定完了です
+PS D:\Hugo&gt; hugo help hugo is the main command, used to build your Hugo site. Hugo is a Fast and Flexible Static Site Generator built with love by spf13 and friends in Go.
+        </div>
+          <a href="/posts/hugo-quick-start/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+        
+      </div>
+    </div>
+  </div>
+</article>
+
+          </div>
+        
+      </section>
+
+      
+
+      </div>
+  
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://hugotest.com" >
+    &copy; 2019 Hugo Test
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
