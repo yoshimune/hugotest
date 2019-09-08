@@ -33,7 +33,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://yoshimune.github.io/hugotest/posts/" />
 
-<meta property="og:updated_time" content="2019-09-08T15:41:27+09:00" />
+<meta property="og:updated_time" content="2019-09-08T16:59:03+09:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="The last theme you&#39;ll ever need. Maybe.">
 
@@ -101,6 +101,37 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="/hugotest/posts/hugo-on-github-pages/" class="link black dim">
+        Hugo on Github Pages
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      Summary Hugoで生成したサイトをGitHub Pagesでホスティングする方法を解説します
+Reference Host on GitHub - HUGO
+User, Organization, and Project Pages - GitHub Help
+GitHub Pages GitHub Pages Type GitHub Pagesには２つのタイプがあります
+ ユーザー/組織ページ  ユーザー、または組織のアカウント名に紐づくページを作成します  プロジェクトページ  プロジェクトリポジトリに紐づくページを作成します。   今回はプロジェクトページを利用します
+公開方法タイプ 公開方法にも２つタイプがあります。
+ masterブランチのルートディレクトリに公開用ディレクトリdocsを作成する 公開用ブランチgh-pagesを作成する  今回は2.の方法を採用します。2.の方法は公開するサイトとソースコードを分離してバージョン管理することができ、バージョン管理がやりやすいという利点があります。
+公開方法手順 公開用ブランチgh-pagesにはサイトに関するファイル以外コミットしないようにします。そのため、gh-pagesブランチはorphan branchとして作成します。
+サイトに関連するファイルはすべてpublicフォルダに生成されます。gh-pagesブランチはこのフォルダのみコミットしていきます。逆にmasterブランチはpublicフォルダを無視するようにします。
+コンフィグ修正 config.tomlを修正してGitHub Pagesで公開するための設定を行います。config.tomlを開いて、以下の箇所を修正します。
+baseURL = &quot;https://yoshimune.github.io/hugotest/&quot;  baseURLはプロジェクト毎に適切なものを設定します。基本的にはhttps://&lt;USER_NAME&gt;.github.io/&lt;PROJECT_NAME&gt;/という形式になっています。
+正確に調べたい場合はGitHubのプロジェクトのページへ行き、 Settings 画面の下部 GitHub Pages のところにURLが書いてあります
+
+
+もしこの場所にURLが書いてなければ一旦この手順を飛ばしても構いません。gh-pagesブランチをpushした後には表示されているはずです。
+.gitignore .gitignoreファイルにpublicフォルダを追加してください
+gh-pages ブランチ作成 gh-pagesブランチはorphan branchとして作成します
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">

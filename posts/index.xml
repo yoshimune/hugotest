@@ -6,10 +6,35 @@
     <description>Recent content in Posts on Hugo Test</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Sep 2019 15:41:27 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Sep 2019 16:59:03 +0900</lastBuildDate>
     
 	<atom:link href="https://yoshimune.github.io/hugotest/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo on Github Pages</title>
+      <link>https://yoshimune.github.io/hugotest/posts/hugo-on-github-pages/</link>
+      <pubDate>Sun, 08 Sep 2019 16:59:03 +0900</pubDate>
+      
+      <guid>https://yoshimune.github.io/hugotest/posts/hugo-on-github-pages/</guid>
+      <description>Summary Hugoで生成したサイトをGitHub Pagesでホスティングする方法を解説します
+Reference Host on GitHub - HUGO
+User, Organization, and Project Pages - GitHub Help
+GitHub Pages GitHub Pages Type GitHub Pagesには２つのタイプがあります
+ ユーザー/組織ページ  ユーザー、または組織のアカウント名に紐づくページを作成します  プロジェクトページ  プロジェクトリポジトリに紐づくページを作成します。   今回はプロジェクトページを利用します
+公開方法タイプ 公開方法にも２つタイプがあります。
+ masterブランチのルートディレクトリに公開用ディレクトリdocsを作成する 公開用ブランチgh-pagesを作成する  今回は2.の方法を採用します。2.の方法は公開するサイトとソースコードを分離してバージョン管理することができ、バージョン管理がやりやすいという利点があります。
+公開方法手順 公開用ブランチgh-pagesにはサイトに関するファイル以外コミットしないようにします。そのため、gh-pagesブランチはorphan branchとして作成します。
+サイトに関連するファイルはすべてpublicフォルダに生成されます。gh-pagesブランチはこのフォルダのみコミットしていきます。逆にmasterブランチはpublicフォルダを無視するようにします。
+コンフィグ修正 config.tomlを修正してGitHub Pagesで公開するための設定を行います。config.tomlを開いて、以下の箇所を修正します。
+baseURL = &amp;quot;https://yoshimune.github.io/hugotest/&amp;quot;  baseURLはプロジェクト毎に適切なものを設定します。基本的にはhttps://&amp;lt;USER_NAME&amp;gt;.github.io/&amp;lt;PROJECT_NAME&amp;gt;/という形式になっています。
+正確に調べたい場合はGitHubのプロジェクトのページへ行き、 Settings 画面の下部 GitHub Pages のところにURLが書いてあります
+
+
+もしこの場所にURLが書いてなければ一旦この手順を飛ばしても構いません。gh-pagesブランチをpushした後には表示されているはずです。
+.gitignore .gitignoreファイルにpublicフォルダを追加してください
+gh-pages ブランチ作成 gh-pagesブランチはorphan branchとして作成します</description>
+    </item>
     
     <item>
       <title>Hugo Quick Start</title>

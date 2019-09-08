@@ -3,21 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://yoshimune.github.io/hugotest/posts/hugo-quick-start/</loc>
-    <lastmod>2019-09-08T15:41:27+09:00</lastmod>
+    <loc>https://yoshimune.github.io/hugotest/posts/hugo-on-github-pages/</loc>
+    <lastmod>2019-09-08T16:59:03+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://yoshimune.github.io/hugotest/</loc>
-    <lastmod>2019-09-08T15:41:27+09:00</lastmod>
+    <lastmod>2019-09-08T16:59:03+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://yoshimune.github.io/hugotest/posts/</loc>
+    <lastmod>2019-09-08T16:59:03+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://yoshimune.github.io/hugotest/posts/hugo-quick-start/</loc>
     <lastmod>2019-09-08T15:41:27+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

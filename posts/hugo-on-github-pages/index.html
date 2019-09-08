@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Hugo Test  | Hugo on Github Pages</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.58.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/hugotest/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Hugo on Github Pages" />
+<meta property="og:description" content="Summary Hugoで生成したサイトをGitHub Pagesでホスティングする方法を解説します
+Reference Host on GitHub - HUGO
+User, Organization, and Project Pages - GitHub Help
+GitHub Pages GitHub Pages Type GitHub Pagesには２つのタイプがあります
+ ユーザー/組織ページ  ユーザー、または組織のアカウント名に紐づくページを作成します  プロジェクトページ  プロジェクトリポジトリに紐づくページを作成します。   今回はプロジェクトページを利用します
+公開方法タイプ 公開方法にも２つタイプがあります。
+ masterブランチのルートディレクトリに公開用ディレクトリdocsを作成する 公開用ブランチgh-pagesを作成する  今回は2.の方法を採用します。2.の方法は公開するサイトとソースコードを分離してバージョン管理することができ、バージョン管理がやりやすいという利点があります。
+公開方法手順 公開用ブランチgh-pagesにはサイトに関するファイル以外コミットしないようにします。そのため、gh-pagesブランチはorphan branchとして作成します。
+サイトに関連するファイルはすべてpublicフォルダに生成されます。gh-pagesブランチはこのフォルダのみコミットしていきます。逆にmasterブランチはpublicフォルダを無視するようにします。
+コンフィグ修正 config.tomlを修正してGitHub Pagesで公開するための設定を行います。config.tomlを開いて、以下の箇所を修正します。
+baseURL = &quot;https://yoshimune.github.io/hugotest/&quot;  baseURLはプロジェクト毎に適切なものを設定します。基本的にはhttps://&lt;USER_NAME&gt;.github.io/&lt;PROJECT_NAME&gt;/という形式になっています。
+正確に調べたい場合はGitHubのプロジェクトのページへ行き、 Settings 画面の下部 GitHub Pages のところにURLが書いてあります
+
+
+もしこの場所にURLが書いてなければ一旦この手順を飛ばしても構いません。gh-pagesブランチをpushした後には表示されているはずです。
+.gitignore .gitignoreファイルにpublicフォルダを追加してください
+gh-pages ブランチ作成 gh-pagesブランチはorphan branchとして作成します" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://yoshimune.github.io/hugotest/posts/hugo-on-github-pages/" />
+<meta property="article:published_time" content="2019-09-08T16:59:03+09:00" />
+<meta property="article:modified_time" content="2019-09-08T16:59:03+09:00" />
+<meta itemprop="name" content="Hugo on Github Pages">
+<meta itemprop="description" content="Summary Hugoで生成したサイトをGitHub Pagesでホスティングする方法を解説します
+Reference Host on GitHub - HUGO
+User, Organization, and Project Pages - GitHub Help
+GitHub Pages GitHub Pages Type GitHub Pagesには２つのタイプがあります
+ ユーザー/組織ページ  ユーザー、または組織のアカウント名に紐づくページを作成します  プロジェクトページ  プロジェクトリポジトリに紐づくページを作成します。   今回はプロジェクトページを利用します
+公開方法タイプ 公開方法にも２つタイプがあります。
+ masterブランチのルートディレクトリに公開用ディレクトリdocsを作成する 公開用ブランチgh-pagesを作成する  今回は2.の方法を採用します。2.の方法は公開するサイトとソースコードを分離してバージョン管理することができ、バージョン管理がやりやすいという利点があります。
+公開方法手順 公開用ブランチgh-pagesにはサイトに関するファイル以外コミットしないようにします。そのため、gh-pagesブランチはorphan branchとして作成します。
+サイトに関連するファイルはすべてpublicフォルダに生成されます。gh-pagesブランチはこのフォルダのみコミットしていきます。逆にmasterブランチはpublicフォルダを無視するようにします。
+コンフィグ修正 config.tomlを修正してGitHub Pagesで公開するための設定を行います。config.tomlを開いて、以下の箇所を修正します。
+baseURL = &quot;https://yoshimune.github.io/hugotest/&quot;  baseURLはプロジェクト毎に適切なものを設定します。基本的にはhttps://&lt;USER_NAME&gt;.github.io/&lt;PROJECT_NAME&gt;/という形式になっています。
+正確に調べたい場合はGitHubのプロジェクトのページへ行き、 Settings 画面の下部 GitHub Pages のところにURLが書いてあります
+
+
+もしこの場所にURLが書いてなければ一旦この手順を飛ばしても構いません。gh-pagesブランチをpushした後には表示されているはずです。
+.gitignore .gitignoreファイルにpublicフォルダを追加してください
+gh-pages ブランチ作成 gh-pagesブランチはorphan branchとして作成します">
+
+
+<meta itemprop="datePublished" content="2019-09-08T16:59:03&#43;09:00" />
+<meta itemprop="dateModified" content="2019-09-08T16:59:03&#43;09:00" />
+<meta itemprop="wordCount" content="146">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo on Github Pages"/>
+<meta name="twitter:description" content="Summary Hugoで生成したサイトをGitHub Pagesでホスティングする方法を解説します
+Reference Host on GitHub - HUGO
+User, Organization, and Project Pages - GitHub Help
+GitHub Pages GitHub Pages Type GitHub Pagesには２つのタイプがあります
+ ユーザー/組織ページ  ユーザー、または組織のアカウント名に紐づくページを作成します  プロジェクトページ  プロジェクトリポジトリに紐づくページを作成します。   今回はプロジェクトページを利用します
+公開方法タイプ 公開方法にも２つタイプがあります。
+ masterブランチのルートディレクトリに公開用ディレクトリdocsを作成する 公開用ブランチgh-pagesを作成する  今回は2.の方法を採用します。2.の方法は公開するサイトとソースコードを分離してバージョン管理することができ、バージョン管理がやりやすいという利点があります。
+公開方法手順 公開用ブランチgh-pagesにはサイトに関するファイル以外コミットしないようにします。そのため、gh-pagesブランチはorphan branchとして作成します。
+サイトに関連するファイルはすべてpublicフォルダに生成されます。gh-pagesブランチはこのフォルダのみコミットしていきます。逆にmasterブランチはpublicフォルダを無視するようにします。
+コンフィグ修正 config.tomlを修正してGitHub Pagesで公開するための設定を行います。config.tomlを開いて、以下の箇所を修正します。
+baseURL = &quot;https://yoshimune.github.io/hugotest/&quot;  baseURLはプロジェクト毎に適切なものを設定します。基本的にはhttps://&lt;USER_NAME&gt;.github.io/&lt;PROJECT_NAME&gt;/という形式になっています。
+正確に調べたい場合はGitHubのプロジェクトのページへ行き、 Settings 画面の下部 GitHub Pages のところにURLが書いてあります
+
+
+もしこの場所にURLが書いてなければ一旦この手順を飛ばしても構いません。gh-pagesブランチをpushした後には表示されているはずです。
+.gitignore .gitignoreファイルにpublicフォルダを追加してください
+gh-pages ブランチ作成 gh-pagesブランチはorphan branchとして作成します"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://yoshimune.github.io/hugotest/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Hugo Test
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/hugotest/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Hugo on Github Pages</h1>
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-09-08T16:59:03&#43;09:00">September 8, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h1 id="summary">Summary</h1>
+
+<p>Hugoで生成したサイトをGitHub Pagesでホスティングする方法を解説します</p>
+
+<h1 id="reference">Reference</h1>
+
+<p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Host on GitHub - HUGO</a><br />
+<a href="https://help.github.com/en/articles/user-organization-and-project-pages#user--organization-pages">User, Organization, and Project Pages - GitHub Help</a></p>
+
+<h1 id="github-pages">GitHub Pages</h1>
+
+<h2 id="github-pages-type">GitHub Pages Type</h2>
+
+<p>GitHub Pagesには２つのタイプがあります</p>
+
+<ul>
+<li>ユーザー/組織ページ
+
+<ul>
+<li>ユーザー、または組織のアカウント名に紐づくページを作成します</li>
+</ul></li>
+<li>プロジェクトページ
+
+<ul>
+<li>プロジェクトリポジトリに紐づくページを作成します。</li>
+</ul></li>
+</ul>
+
+<p>今回はプロジェクトページを利用します</p>
+
+<h2 id="公開方法タイプ">公開方法タイプ</h2>
+
+<p>公開方法にも２つタイプがあります。</p>
+
+<ol>
+<li><code>master</code>ブランチのルートディレクトリに公開用ディレクトリ<code>docs</code>を作成する</li>
+<li>公開用ブランチ<code>gh-pages</code>を作成する</li>
+</ol>
+
+<p>今回は2.の方法を採用します。2.の方法は公開するサイトとソースコードを分離してバージョン管理することができ、バージョン管理がやりやすいという利点があります。</p>
+
+<h1 id="公開方法手順">公開方法手順</h1>
+
+<p>公開用ブランチ<code>gh-pages</code>にはサイトに関するファイル以外コミットしないようにします。そのため、<code>gh-pages</code>ブランチは<a href="https://git-scm.com/docs/git-checkout/#git-checkout---orphanltnewbranchgt">orphan branch</a>として作成します。</p>
+
+<p>サイトに関連するファイルはすべて<code>public</code>フォルダに生成されます。<code>gh-pages</code>ブランチはこのフォルダのみコミットしていきます。逆に<code>master</code>ブランチは<code>public</code>フォルダを無視するようにします。</p>
+
+<h2 id="コンフィグ修正">コンフィグ修正</h2>
+
+<p><code>config.toml</code>を修正してGitHub Pagesで公開するための設定を行います。<code>config.toml</code>を開いて、以下の箇所を修正します。</p>
+
+<pre><code>baseURL = &quot;https://yoshimune.github.io/hugotest/&quot;
+</code></pre>
+
+<p><code>baseURL</code>はプロジェクト毎に適切なものを設定します。基本的には<code>https://&lt;USER_NAME&gt;.github.io/&lt;PROJECT_NAME&gt;/</code>という形式になっています。</p>
+
+<p>正確に調べたい場合はGitHubのプロジェクトのページへ行き、 <strong>Settings</strong> 画面の下部 <strong>GitHub Pages</strong> のところにURLが書いてあります</p>
+
+<p><a href="https://gyazo.com/626b36b1383b2c3ffe70e32c650cb1b4"><img src="https://i.gyazo.com/626b36b1383b2c3ffe70e32c650cb1b4.png" alt="Image from Gyazo" /></a></p>
+
+<p><a href="https://gyazo.com/4f9c95650bf14039695ef71a276ebcc1"><img src="https://i.gyazo.com/4f9c95650bf14039695ef71a276ebcc1.png" alt="Image from Gyazo" /></a></p>
+
+<p>もしこの場所にURLが書いてなければ一旦この手順を飛ばしても構いません。<code>gh-pages</code>ブランチをpushした後には表示されているはずです。</p>
+
+<h2 id="gitignore">.gitignore</h2>
+
+<p><code>.gitignore</code>ファイルに<code>public</code>フォルダを追加してください</p>
+
+<h2 id="gh-pages-ブランチ作成">gh-pages ブランチ作成</h2>
+
+<p><code>gh-pages</code>ブランチは<a href="https://git-scm.com/docs/git-checkout/#git-checkout---orphanltnewbranchgt">orphan branch</a>として作成します</p>
+
+<pre><code>$ git checkout --orphan gh-pages
+$ git reset --hard
+$ git commit --allow-empty -m &quot;Initializing gh-pages branch&quot;
+$ git push origin gh-pages
+$ git checkout master
+</code></pre>
+
+<blockquote>
+<p>ファイルが大量に消えたり再生成したりするので、プロジェクト配下のファイルはすべて閉じておくことを推奨します</p>
+</blockquote>
+
+<h2 id="build-and-deployment">Build and Deployment</h2>
+
+<p><code>gh-pages</code>ブランチをgitの<a href="https://git-scm.com/docs/git-worktree">worktree feature</a>を使って<code>public</code>フォルダにチェックアウトします。<br />
+worktreeは複数の同じローカルリポジトリのブランチを持って別のディレクトリにチェックアウトさせることを可能にします。</p>
+
+<pre><code>$ rm -rf public
+$ git worktree add -B gh-pages public origin/gh-pages
+</code></pre>
+
+<p><code>hugo</code>コマンドを使ってサイトを再生成し、生成したファイルを<code>gh-pages</code>ブランチにコミットしてください</p>
+
+<pre><code>$ hugo
+$ cd public &amp;&amp; git add --all &amp;&amp; git commit -m &quot;Publishing to gh-pages&quot; &amp;&amp; cd ..
+</code></pre>
+
+<p>もしローカルの<code>gh-pages</code>ブランチの変更が問題なければ、それらをリモートリポジトリにpushします</p>
+
+<pre><code>$ git push origin gh-pages
+</code></pre>
+
+<h3 id="github-pages-設定">GitHub Pages 設定</h3>
+
+<p><code>gh-pages</code>ブランチをパブリッシュブランチとして使用するため、GitHub のUIでリポジトリの構成を行う必要があります。GitHubがこのブランチを作成したことを認識すると、これはおそらく自動で行われます。GitHubプロジェクト内から自動でブランチをセットすることも可能です。</p>
+
+<ol>
+<li><strong>Settings</strong> → <strong>GitHub Pages</strong></li>
+<li><strong>Source</strong> から、&rdquo;gh-pages ブランチ&rdquo;を選択して <strong>Save</strong> します。もしオプションが有効でない場合、まだブランチが作成されていないかローカルマシンからホストリポジトリへのpushが完了していないかもしれません</li>
+</ol>
+
+<p><a href="https://gyazo.com/626b36b1383b2c3ffe70e32c650cb1b4"><img src="https://i.gyazo.com/626b36b1383b2c3ffe70e32c650cb1b4.png" alt="Image from Gyazo" /></a></p>
+
+<p><a href="https://gyazo.com/5b86accad25dded869e505375606d383"><img src="https://i.gyazo.com/5b86accad25dded869e505375606d383.png" alt="Image from Gyazo" /></a></p>
+
+<h2 id="スクリプトで自動化">スクリプトで自動化</h2>
+
+<p>上記の一連の手順（GitHubでの設定を除く）を行うスクリプトファイルを用意すると便利です。<a href="https://github.com/yoshimune/hugotest/blob/master/publish_to_ghpages.sh">こちら</a>を参考にスクリプトファイルを用意してみてください。</p>
+
+<p>このスクリプトはpublishまでは完了させますが、リモートへのpushは行っていません。リモートへのpushは手動で行ってください。</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://yoshimune.github.io/hugotest/" >
+    &copy; 2019 Hugo Test
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/hugotest/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
