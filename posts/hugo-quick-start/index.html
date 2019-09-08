@@ -73,7 +73,7 @@ PS D:\Hugo&gt; hugo help hugo is the main command, used to build your Hugo site.
 
 <meta itemprop="datePublished" content="2019-09-08T15:41:27&#43;09:00" />
 <meta itemprop="dateModified" content="2019-09-08T15:41:27&#43;09:00" />
-<meta itemprop="wordCount" content="267">
+<meta itemprop="wordCount" content="276">
 
 
 
@@ -354,6 +354,15 @@ enableRobotsTXT = true
 </code></pre>
 
 <p>ローカルサイトは <a href="http://localhost:1313">http://localhost:1313</a> で確認できます</p>
+
+<h3 id="補足">補足</h3>
+
+<p>Hugoのサイトを何らかのホスティングサービス(たとえばGitHub Pages)で公開する場合、<code>config.toml</code>の<code>baseURL</code>にドメインを設定します。例えば次のような設定をしたとします。</p>
+
+<pre><code>baseURL = &quot;https://yoshimune.github.io/hugotest/&quot;
+</code></pre>
+
+<p>この場合、ローカルサーバーのアドレスは <a href="http://localhost:1313/hugotest/">http://localhost:1313/hugotest/</a> となります</p>
 <ul class="pa0">
   
 </ul>
